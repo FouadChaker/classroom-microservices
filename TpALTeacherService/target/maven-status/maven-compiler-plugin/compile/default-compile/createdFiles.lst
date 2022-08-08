@@ -1,0 +1,4 @@
+com\tp\controllers\TeacherRepository.class
+com\tp\entities\Teacher.class
+com\tp\TpAlTeacherServiceApplication.class
+com\tp\controllers\configService.class

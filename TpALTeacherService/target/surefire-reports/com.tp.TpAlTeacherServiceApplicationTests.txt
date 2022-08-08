@@ -1,0 +1,9 @@
+-------------------------------------------------------------------------------
+Test set: com.tp.TpAlTeacherServiceApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 70.266 s <<< FAILURE! - in com.tp.TpAlTeacherServiceApplicationTests
+contextLoads  Time elapsed: 0.005 s  <<< ERROR!
+java.lang.IllegalStateException: Failed to load ApplicationContext
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'scopedTarget.configService': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'global' in value "${global}"
+Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'global' in value "${global}"
+
