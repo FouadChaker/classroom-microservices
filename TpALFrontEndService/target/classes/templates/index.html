@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1"/>
+<title>e-learning</title>
+  <link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+</head>
+	<body>
+		<div align="left">
+			<ul>
+				<li><a href="opensubscribe">subscribe</a></li>
+				<li><a href="openlogin">Login</a></li>
+			</ul>
+		</div>
+		<div align="center">
+	    <h1>M2 GL Courses</h1>
+	    <table border="1" cellpadding="10">
+	        <thead>
+	            <tr>
+	                <th>name</th>
+	                <th>volume horraire cours</th>
+	                <th>volume horraire tp</th>
+	                <th>volume horraire td</th>
+	                <th>coefficient</th>
+	                <th>credit</th>
+	                <th>teacher</th>
+	            </tr>
+	        </thead>
+	        <tbody>
+	            <tr th:each="course : ${courseList}">
+	                <td th:text="${course.name}">name</td>
+	                <td th:text="${course.volumetp}">volume tp</td>
+	                <td th:text="${course.volumetd}">volume td</td>
+	                <td th:text="${course.volumecours}">volume cours</td>
+	                <td th:text="${course.coefficient}">coefficient</td>
+	                <td th:text="${course.credit}">credit</td>
+	                <td th:text="${course.createdBy.firstname} +' '+ ${course.createdBy.lastname} +' ('+ ${course.createdBy.email} +')'">
+	                	teacher</td>
+	            </tr>
+	        </tbody>
+	    </table>
+	</div>    
+</body>
+</html>

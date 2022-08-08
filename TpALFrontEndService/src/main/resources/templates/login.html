@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<title>e-learning</title>
+  <link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+</head>
+<body>
+<div align="center" style="height:100%">
+		<form method="post" th:action="login" th:object="${teacher}">
+
+			<table border="0" cellpadding="10">
+				<tr th:text="${message}"></tr>
+				<tr>
+					<td>username:</td>
+					<td><input type="text" th:field="*{username}" /></td>
+				</tr>	
+				<tr>
+					<td>password:</td>
+					<td><input type="password" th:field="*{password}" /></td>
+				</tr>							
+				<tr>
+					<td></td>
+					<td><input type="submit" value="login"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>e-learning</title>
+  <link rel = "stylesheet" href  = "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">  
+</head>
+<body>
+	<div align="center" style="height:100%">
+		<form th:action="savecourse" th:object="${course}" method="post">
+
+			<table border="0" cellpadding="10">			
+				<tr hidden="hidden">				
+					<td>id:</td>
+					<td><input type="text" th:field="*{id}" /></td>
+				</tr>
+				<tr>				
+					<td>name:</td>
+					<td><input type="text" th:field="*{name}" /></td>
+				</tr>
+				<tr hidden="hidden">
+					<td>teacher:</td>
+					<td><input type="text" th:field="*{teacher}" /></td>
+				</tr>
+				<tr>
+					<td>coefficient:</td>
+					<td><input type="text" th:field="*{coefficient}" /></td>
+				</tr>
+				<tr>
+					<td>volume tp:</td>
+					<td><input type="text" th:field="*{volumetp}" /></td>
+				</tr>
+				<tr>
+					<td>volume td:</td>
+					<td><input type="text" th:field="*{volumetd}" /></td>
+				</tr>
+				<tr>
+					<td>volume cours:</td>
+					<td><input type="text" th:field="*{volumecours}" /></td>
+				</tr>
+				<tr>
+					<td>credit:</td>
+					<td><input type="text" th:field="*{credit}" /></td>
+				</tr>	
+				<tr>
+					<td></td>
+					<td><input type="submit" value="save"></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>
